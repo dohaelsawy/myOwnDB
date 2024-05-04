@@ -16,3 +16,10 @@ the link of tutorial -> https://cstack.github.io/db_tutorial/
 - The input to the front-end is a SQL query. The output is SQLite virtual machine bytecode.
 - It starts a read-execute-print loop, which takes an input buffer (an array of characters in the end), the length of that buffer, and the length of incoming input.
 - The first command is ".exit", which terminates the program. 
+
+
+-- part2 ->
+- We start by making an SQL compiler that parses a string and outputs an internal representation called bytecode.
+- Instead of comparing commands like ".exit", we separate the commands into two types: one for meta commands and the other for insertion, selection, etc.
+- If the command starts with ".", it's a meta command; otherwise, we switch for insertion or selection. If the statement is correct, return the state of success for this statement; otherwise, return unrecognized.
+- In the end, compilation is about filtering the commands and checking if they're typed correctly or not.
