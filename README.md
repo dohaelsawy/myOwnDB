@@ -23,3 +23,13 @@ the link of tutorial -> https://cstack.github.io/db_tutorial/
 - Instead of comparing commands like ".exit", we separate the commands into two types: one for meta commands and the other for insertion, selection, etc.
 - If the command starts with ".", it's a meta command; otherwise, we switch for insertion or selection. If the statement is correct, return the state of success for this statement; otherwise, return unrecognized.
 - In the end, compilation is about filtering the commands and checking if they're typed correctly or not.
+
+
+-- part3 ->
+
+this part was generally about how to parse the insert query, save it in a table and retrive it with select statement 
+- to parse insert query he used `sscanf` to read formatted input and asign the data to row struct
+- row struct was basically the hard-coded row containt for our table 
+- to save data in memory we used array for simplicitly and its size is the max number for table to have pages 
+- a page is fixed-size that is contiguous block of memory that contains the data of 1 row
+- To save data in memory, a `Row` structure is converted into a binary format suitable for storage or transmission in the insert statement. Conversely, binary data is converted back into a `Row` structure, restoring its original state in the select statement.
