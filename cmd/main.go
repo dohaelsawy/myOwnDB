@@ -6,7 +6,7 @@ import (
 	pkg "github.com/dohaelsawy/myOwnDB/pkg"
 )
 
-var CmdList = []string{"exit"}
+
 
 
 func main() {
@@ -17,9 +17,6 @@ func main() {
 		if !ok {
 			os.Exit(1)
 		}
-		if buffer.CompareStr(CmdList[0]){
-			os.Exit(0)
-		}
-		println("this command isn't valid")
+		buffer.ExecuteCmd()
 	}
 }
