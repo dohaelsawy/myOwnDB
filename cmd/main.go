@@ -10,6 +10,7 @@ import (
 
 
 func main() {
+	table := pkg.NewTable()
 	buffer := pkg.NewInputBuffer()
 	for {
 		pkg.PrintPrompt()
@@ -17,6 +18,6 @@ func main() {
 		if !ok {
 			os.Exit(1)
 		}
-		buffer.ExecuteCmd()
+		buffer.ExecuteCmd(table)
 	}
 }
